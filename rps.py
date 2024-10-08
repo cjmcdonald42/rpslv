@@ -1,9 +1,10 @@
 #
-#   project:    rps.py
-#   author:     Charles J McDonald <cmcdonald@woonsocketschools.com>
-#   version:    1.0
+#           project:    rps.py
+#            author:    Charles J McDonald <cmcdonald@woonsocketschools.com>
+#           version:    2.0
+#   last updated on:    10/8/2024
 #
-#   description: Rock, Paper, Scissors for 2 players
+#   description: Rock, Paper, Scissors, Lizard, Spock for 2 players
 #
 
 # === Introduce the Game
@@ -26,30 +27,78 @@ while isPlaying:
         [R]ock : An ancient weapon of destruction
         [P]aper: An elegant weapon for the literate
         [S]cissors: A brutish blade for the stylish
+        [L]izard: A deadly reptile from the far realms
+        [V]Spock: A being of ineffable logic
     """)
 
     weapon1 = input(f"{player1}, choose thy weapon! : ")
     weapon2 = input(f"{player2}, choose thy weapon! : ")
 
     # === Resolve combat
-    if weapon1 == "R" :
+    if weapon1 == "R" :     #   Player1 chooses Rock
         if weapon2 == "R" :
             print("Thou hast ended in a Draw!")
-        elif weapon2 == "P" :
+        elif weapon2 == "P":
             print(f"Paper covers Rock! {player2} wins this round!")
             score2 = score2 + 1
+        elif weapon2 == "V":
+            print(f"Spock vapourizes Rock with his phaser! {player2} wins this round!")
+            score2 = score2 + 1
+        elif weapon2 == "L":
+            print(f"Rock crushes Lizard! {player1} wins this round!")
+            score1 = score1 + 1
         else :      # weapon2 must be Scissors
             print(f"Rock crushes Scissors! {player1} wins this round!")
             score1 = score1 + 1
-    elif weapon1 == "P" :
+            
+    elif weapon1 == "P" :    #   Player1 chooses Paper
         if weapon2 == "P" :
             print("Thou hast ended in a Draw!")
         elif weapon2 == "R" :
             print(f"Paper covers Rock! {player1} wins this round!")
             score1 = score1 + 1
+        elif weapon2 == "V" :
+            print(f"Paper disprooves Spock! {player1} wins this round!")
+            score1 = score1 + 1
+        elif weapon2 == "L":
+            print(f"Lizard shreds Paper! {player2} wins this round!")
+            score2 = score2 + 1
         else :
             print(f"Scissors cut Paper! {player2} wins this round!")
             score2 = score2 + 1
+            
+    elif weapon1 == "L":    #   Player1 chooses Lizard
+        if weapon2 == "L":
+            print("Thou hast ended in a Draw!")
+        elif weapon2 == "V":
+            print(f"Lizard poisons Spock! {player1} wins this round!")
+            score1 = score1 + 1
+        elif weapon2 == "P":
+            print(f"Lizard eats Paper! {player1} wins this round!")
+            score1 = score1 + 1
+        elif weapon2 == "R":
+            print(f"Rock crushes Lizard! {player2} wins this round!")
+            score2 = score2 + 1
+        else:
+            print(f"Scissors decapitate Lizard! {player2} wins this round!")
+            score2 = score2 + 1
+            
+    elif weapon1 == "V":    #   Player1 chooses Spock
+        if weapon2 == "V":
+            print("Thou hast ended in a Draw!")
+        elif weapon2 == "S":
+            print(f"Spock somthing Scissors! {player1} wins this round!")
+            score1 = score1 + 1
+        elif weapon2 == "R":
+            print(f"Spock vapourizes Rock with his phaser! {player1} wins this round!")
+            score1 = score1 + 1
+        elif weapon2 == "L":
+            print(f"Lizard poisons Spock! {player2} wins this round!")
+            score2 = score2 + 1
+        else:
+            print(f"Paper disproves Spock! {player2} wins this round!")
+            score2 = score2 + 1
+
     else:           # weapon1 must be Scissors
         if weapon2 == "S" :
             print("Thou hast ended in a Draw!")
@@ -73,5 +122,5 @@ while isPlaying:
         print("The duel ends in a draw!")
 
     # == Play again?
-    ask = input("Would thou like another round? : ")
+    ask = input("Would thoust like another round? : ")
     if ask != "Y": isPlaying = False
