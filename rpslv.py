@@ -123,10 +123,6 @@ while isPlaying:
             print(f"Rock breaks Scissors! {player2} wins this round!")
             score2 = score2 + 1
 
-
-    computerPlayer = "Horatio the Chaotic Computer"
-
-
     print(f"{player1} hath scored {score1} points.
     if player2 == "C":
         print(f"{computerPlayer} hath scored {score2} points.")
