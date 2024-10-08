@@ -1,5 +1,5 @@
 #
-#           project:    rps.py
+#           project:    rpslv.py
 #            author:    Charles J McDonald <cmcdonald@woonsocketschools.com>
 #           version:    2.0
 #   last updated on:    10/8/2024
@@ -8,7 +8,7 @@
 #
 
 # === Introduce the Game
-# Rules = Rock, Paper, or Scissors
+# Rules = Rock, Paper, Scissors, Lizard, Spock
 print("""
 === RPS Duel === \n
     Challengers, step forward and prepare thyselves for an epic duel!!!
@@ -23,7 +23,7 @@ isPlaying = True
 while isPlaying:
     # === Choose your move
     print("""
-    On yon table before thee reste weapons three:
+    On yon table before thee reste weapons five:
         [R]ock : An ancient weapon of destruction
         [P]aper: An elegant weapon for the literate
         [S]cissors: A brutish blade for the stylish
@@ -87,7 +87,7 @@ while isPlaying:
         if weapon2 == "V":
             print("Thou hast ended in a Draw!")
         elif weapon2 == "S":
-            print(f"Spock somthing Scissors! {player1} wins this round!")
+            print(f"Spock smashes Scissors! {player1} wins this round!")
             score1 = score1 + 1
         elif weapon2 == "R":
             print(f"Spock vapourizes Rock with his phaser! {player1} wins this round!")
@@ -100,14 +100,20 @@ while isPlaying:
             score2 = score2 + 1
 
     else:           # weapon1 must be Scissors
-        if weapon2 == "S" :
+        if weapon2 == "S":
             print("Thou hast ended in a Draw!")
-        elif weapon2 == "R" :
-            print(f"Rock breaks Scissors! {player2} wins this round!")
-            score2 = score2 + 1
-        else :      # weapon2 must be Paper
+        elif weapon2 == "L":
+            print(f"Scissors decapitate Lizard! {player1} wins this round!")
+            score1 = score1 + 1
+        elif weapon2 == "P":
             print(f"Scissors cut Paper! {player1} wins this round!")
             score1 = score1 + 1
+        elif weapon2 == "V":
+            print(f"Spock smashes Scissors! {player2} wins this round!")
+            score2 = score2 + 1
+        else:
+            print(f"Rock breaks Scissors! {player2} wins this round!")
+            score2 = score2 + 1
 
     print(f"""
     {player1} hath scored {score1} points.
