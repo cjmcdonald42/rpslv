@@ -1,7 +1,7 @@
 #
 #           project:    rpslv.py
 #            author:    Charles J McDonald <cmcdonald@woonsocketschools.com>
-#           version:    2024.10.8.02
+#           version:    2024.10.8.04
 #
 #   description: Rock, Paper, Scissors, Lizard, Spock for 1 or 2 players
 #
@@ -141,4 +141,3 @@ elif score2 > score1:
     print(f"{player2} win-ith the duel with {score2} points!")
 else:
     print("The duel doth end in a draw!")
-
