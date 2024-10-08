@@ -74,4 +74,4 @@ while isPlaying:
 
     # == Play again?
     ask = input("Would thou like another round? : ")
-    if ask == "N": isPlaying = False
+    if ask != "Y": isPlaying = False
