@@ -4,6 +4,7 @@
 #
 #   description: Rock, Paper, Scissors for 2 players
 #
+# import getpass      # Password method will allow hidden input
 
 # === Introduce the Game
 # Rules = Rock, Paper, or Scissors
@@ -25,8 +26,8 @@ print("""
         [S]cissors: A brutish blade for the stylish
 """)
 
-weapon1 = input(f"{player1}, choose thy weapon! : ")
-weapon2 = input(f"{player2}, choose thy weapon! : ")
+weapon1 = input(f"{player1}, choose thy weapon! : ").upper()      # make uppercase
+weapon2 = input(f"{player2}, choose thy weapon! : ").upper()
 
 # === Resolve combat
 if weapon1 == "R" :
