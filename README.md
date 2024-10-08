@@ -10,4 +10,5 @@
 
    This repo was created with my PTech Students as a learning project for Python and GitHub.
    To contribute to this repo, please fork and create a branch for each new issue or enchancement
-   you wish to work on. When complete, submit a pull request and link to the issue.
+   you wish to work on. When complete, submit a pull request to squash and merge your code and link
+   it to the issue you are addressing.
