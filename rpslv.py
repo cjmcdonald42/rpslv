@@ -1,7 +1,7 @@
 #
 #           project:    rpslv.py
 #            author:    Charles J McDonald <cmcdonald@woonsocketschools.com>
-#           version:    2024.10.8.04
+#           version:    2024.10.8.05
 #
 #   description: Rock, Paper, Scissors, Lizard, Spock for 1 or 2 players
 #
@@ -123,7 +123,7 @@ while isPlaying:
             print(f"Rock breaks Scissors! {player2} wins this round!")
             score2 = score2 + 1
 
-    print(f"{player1} hath scored {score1} points.
+    print(f"{player1} hath scored {score1} points.")
     if player2 == "C":
         print(f"{computerPlayer} hath scored {score2} points.")
     else :
