@@ -1,8 +1,7 @@
 #
 #   project:    rps.py
 #   author:     Charles J McDonald <cmcdonald@woonsocketschools.com>
-#   version:    0.9
-#   maturity:   alpha
+#   version:    1.0
 #
 #   description: Rock, Paper, Scissors for 2 players
 #
@@ -10,8 +9,8 @@
 # === Introduce the Game
 # Rules = Rock, Paper, or Scissors
 print("""
-    === RPS Duel === \n
-    Challengers, step forward and prepare thyselves for an epic duel!!! \n    
+=== RPS Duel === \n
+    Challengers, step forward and prepare thyselves for an epic duel!!!
 """)
 
 # === Get the names of our challengers
@@ -23,10 +22,10 @@ isPlaying = True
 while isPlaying:
     # === Choose your move
     print("""
-        On yon table before thee reste weapons three :
-            [R]ock : An ancient weapon of destruction
-            [P]aper: An elegant weapon for the literate
-            [S]cissors: A brutish blade for the stylish
+    On yon table before thee reste weapons three:
+        [R]ock : An ancient weapon of destruction
+        [P]aper: An elegant weapon for the literate
+        [S]cissors: A brutish blade for the stylish
     """)
 
     weapon1 = input(f"{player1}, choose thy weapon! : ")
@@ -39,7 +38,7 @@ while isPlaying:
         elif weapon2 == "P" :
             print(f"Paper covers Rock! {player2} wins this round!")
             score2 = score2 + 1
-        else :
+        else :      # weapon2 must be Scissors
             print(f"Rock crushes Scissors! {player1} wins this round!")
             score1 = score1 + 1
     elif weapon1 == "P" :
@@ -51,19 +50,19 @@ while isPlaying:
         else :
             print(f"Scissors cut Paper! {player2} wins this round!")
             score2 = score2 + 1
-    else:   # weapon1 must be Scissors
+    else:           # weapon1 must be Scissors
         if weapon2 == "S" :
             print("Thou hast ended in a Draw!")
         elif weapon2 == "R" :
             print(f"Rock breaks Scissors! {player2} wins this round!")
             score2 = score2 + 1
-        else :
+        else :      # weapon2 must be Paper
             print(f"Scissors cut Paper! {player1} wins this round!")
             score1 = score1 + 1
 
     print(f"""
-    {player1} hath scored {score1} points. \n
-    {player2} hath scored {score2} points. \n
+    {player1} hath scored {score1} points.
+    {player2} hath scored {score2} points.
     """)
 
     if score1 > score2:
@@ -74,5 +73,5 @@ while isPlaying:
         print("The duel ends in a draw!")
 
     # == Play again?
-    ask = input("Would you like another round? : ")
+    ask = input("Would thou like another round? : ")
     if ask == "N": isPlaying = False
