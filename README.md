@@ -1,6 +1,6 @@
 # rpslv.py
             author:    Charles J McDonald <cmcdonald@woonsocketschools.com>
-           version:    2024.10.8.04
+           version:    2024.10.8.05
 
    Rock, Paper, Scissors, Lizard, Spock
    A game for 1 or 2 players.
