@@ -5,6 +5,7 @@
 #
 #   description: Rock, Paper, Scissors, Lizard, Spock for 1 or 2 players
 #
+import random
 
 # === Introduce the Game
 # Rules = Rock, Paper, Scissors, Lizard, Spock
@@ -17,6 +18,7 @@ print("""
 player1 = input("First Challenger, what is thy name? : ")
 player2 = input("Second Challenger, state thy name or enter 'C' to practice against the computer: ")
 weaponsFullName = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
+computerPlayer = "Horatio the Chaotic Computer"
 weapons = ["R", "P", "S", "L", "V"]
 score1 = score2 = 0
 isPlaying = True
@@ -33,7 +35,7 @@ while isPlaying:
     """)
 
     weapon1 = input(f"{player1}, choose thy weapon! : ")
-    if player2 == "C":  # Computer randomly choses a weapon
+    if player2 == "C":  # Computer randomly chooses a weapon
         randomWeapon = random.randint(0, 4)
         weapon2 = weapons[randomWeapon]
         print(f"Horatio the Chaotic Computer chooses {weaponsFullName[randomWeapon]}")
@@ -121,10 +123,15 @@ while isPlaying:
             print(f"Rock breaks Scissors! {player2} wins this round!")
             score2 = score2 + 1
 
-    print(f"""
-    {player1} hath scored {score1} points.
-    {player2} hath scored {score2} points.
-    """)
+
+    computerPlayer = "Horatio the Chaotic Computer"
+
+
+    print(f"{player1} hath scored {score1} points.
+    if player2 == "C":
+        print(f"{computerPlayer} hath scored {score2} points.")
+    else :
+        print(f"{player2} hath scored {score2} points.")
 
     # == Play again?
     ask = input("Would thoust like another round? : ")
@@ -134,6 +141,7 @@ while isPlaying:
 if score1 > score2:
     print(f"{player1} win-ith the duel with {score1} points!")
 elif score2 > score1:
+    if player2 == "C": player2 = computerPlayer
     print(f"{player2} win-ith the duel with {score2} points!")
 else:
     print("The duel doth end in a draw!")
