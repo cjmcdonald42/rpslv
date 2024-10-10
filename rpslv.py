@@ -1,7 +1,7 @@
 #
 #           project:    rpslv.py
 #            author:    Charles J McDonald <cmcdonald@woonsocketschools.com>
-#           version:    2024.10.8.05
+#           version:    2024.10.10.01
 #
 #   description: Rock, Paper, Scissors, Lizard, Spock for 1 or 2 players
 #
@@ -43,10 +43,10 @@ while isPlaying:
         weapon2 = input(f"{player2}, choose thy weapon! : ")
 
     # === Resolve combat
-    if weapon1 == "R":  # Player1 chooses Rock
-        if weapon2 == "R":
-            print("Thou hast ended in a Draw!")
-        elif weapon2 == "P":
+    if weapon1 == weapon2:      # -- A Draw
+        print("Thou hast ended in a Draw!")
+    elif weapon1 == "R":  # Player1 chooses Rock
+        if weapon2 == "P":
             print(f"Paper covers Rock! {player2} wins this round!")
             score2 = score2 + 1
         elif weapon2 == "V":
@@ -60,9 +60,7 @@ while isPlaying:
             score1 = score1 + 1
 
     elif weapon1 == "P":  # Player1 chooses Paper
-        if weapon2 == "P":
-            print("Thou hast ended in a Draw!")
-        elif weapon2 == "R":
+        if weapon2 == "R":
             print(f"Paper covers Rock! {player1} wins this round!")
             score1 = score1 + 1
         elif weapon2 == "V":
@@ -76,9 +74,7 @@ while isPlaying:
             score2 = score2 + 1
 
     elif weapon1 == "L":  # Player1 chooses Lizard
-        if weapon2 == "L":
-            print("Thou hast ended in a Draw!")
-        elif weapon2 == "V":
+        if weapon2 == "V":
             print(f"Lizard poisons Spock! {player1} wins this round!")
             score1 = score1 + 1
         elif weapon2 == "P":
@@ -92,9 +88,7 @@ while isPlaying:
             score2 = score2 + 1
 
     elif weapon1 == "V":  # Player1 chooses Spock
-        if weapon2 == "V":
-            print("Thou hast ended in a Draw!")
-        elif weapon2 == "S":
+        if weapon2 == "S":
             print(f"Spock smashes Scissors! {player1} wins this round!")
             score1 = score1 + 1
         elif weapon2 == "R":
@@ -108,9 +102,7 @@ while isPlaying:
             score2 = score2 + 1
 
     else:  # weapon1 must be Scissors
-        if weapon2 == "S":
-            print("Thou hast ended in a Draw!")
-        elif weapon2 == "L":
+        if weapon2 == "L":
             print(f"Scissors decapitate Lizard! {player1} wins this round!")
             score1 = score1 + 1
         elif weapon2 == "P":
